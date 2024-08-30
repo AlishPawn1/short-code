@@ -1,0 +1,91 @@
+/* animated */
+.animated {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.slide-animation > * {
+    opacity: 0;
+    visibility: hidden;
+}
+.splide__slide.is-active .slide-animation > *{
+    opacity: 1;
+    visibility: visible;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.slide-animation > *:nth-child(1) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+.slide-animation > *:nth-child(2) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.slide-animation > *:nth-child(3) {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.slide-animation > *:nth-child(4) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+/* animated */
+
+.banner-slide .banner{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 525px;
+    padding: 100px 0;
+    background-color: var(--bg-color-1);
+}
+.banner-slide .splide__pagination{
+    bottom: 50px;
+}
+.banner-content{
+    padding: 30px;
+    position: relative;
+    z-index: 5;
+}
+.banner-content .sub-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+.banner-content .title{
+    margin-bottom: 15px;
+    font-size: 50px;
+    font-weight: 700;
+}
+.banner-content .btn-wrap{
+    margin-top: 30px;
+}
+
+/* key frame */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* key frame */

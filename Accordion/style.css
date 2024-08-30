@@ -1,0 +1,49 @@
+.faq-section .main-title .title{
+    font-size: 52px;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+}
+.faq-section .accordion{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.faq-section .accordion .faq-item{
+    border: 1px solid #ededed;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+.faq-section .accordion .title{
+    font-size: 16px;
+    color: #009193;
+    padding-right: 20px;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+.faq-section .accordion .title::before{
+    content: '\f068';
+    position: absolute;
+    right: 0;
+    font-family: 'Font Awesome 6 Free';
+    font-size: 16px;
+    top: 0;
+    font-weight: 600;
+}
+.faq-section .accordion .title.collapsed::before{
+    content: '\f067 ';
+    position: absolute;
+    right: 0;
+    font-family: 'Font Awesome 6 Free';
+    font-size: 16px;
+    top: 0;
+    font-weight: 600;
+}
+.faq-section .accordion .faq-body{
+    font-size: 14px;
+    color: #747474;
+    line-height: 1.8;
+    padding-bottom: 0;
+    padding-top: 20px;
+}
