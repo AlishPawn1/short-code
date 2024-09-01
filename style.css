@@ -4,10 +4,24 @@ a{
 }
 .item{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 .item .image{
     height: 250px;
     background-color: #ddd;
+    overflow: hidden;
+    position: relative;
+}
+.item .image::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.1;
 }
 .item .title{
     font-size: 18px;
@@ -22,4 +36,8 @@ a{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: all 0.3s linear;
+}
+.item:hover .image img{
+    transform: scale(1.1);
 }
