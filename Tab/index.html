@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Tab with jQuery</title>
+<style>
+    /* Basic styling */
+    .tab-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .tab-buttons {
+        display: flex;
+    }
+
+    .tab-buttons button {
+        flex: 1;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #f1f1f1;
+        border: none;
+        outline: none;
+    }
+
+    .tab-buttons button.active {
+        background-color: #ccc;
+    }
+
+    .tab-content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="tab-container">
+    <div class="tab-buttons">
+        <button class="tab-link active" data-tab="tab1">Tab 1</button>
+        <button class="tab-link" data-tab="tab2">Tab 2</button>
+        <button class="tab-link" data-tab="tab3">Tab 3</button>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <h2>Tab 1 Content</h2>
+        <p>This is content for Tab 1.</p>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Tab 2 Content</h2>
+        <p>This is content for Tab 2.</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h2>Tab 3 Content</h2>
+        <p>This is content for Tab 3.</p>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('.tab-link').click(function(){
+        // Remove active class from all tabs and contents
+        $('.tab-link').removeClass('active');
+        $('.tab-content').removeClass('active').hide();
+        
+        // Add active class to clicked tab and show related content
+        $(this).addClass('active');
+        $('#' + $(this).data('tab')).addClass('active').fadeIn();
+    });
+});
+</script>
+
+</body>
+</html>
