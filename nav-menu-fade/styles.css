@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding: 0 20px;
+}
+header{
+    padding: 20px 0;
+}
+.nav-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    max-width: 200px;
+    height: 100%;
+    width: 100%;
+}
+.hfe-nav-menu__toggle{
+    position: relative;
+    z-index: 9;
+}
+.hfe-nav-menu-icon svg{
+    cursor: pointer;
+    --size: 25px;
+    height: var(--size);
+    width: var(--size);
+}
+.hfe-nav-menu__toggle.hfe-active-menu .hfe-nav-menu-icon svg{
+    fill: #fff;
+}
+ul a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+}
+ul{
+    list-style: none;
+    /* display: flex; */
+}
+
+.hfe-nav-menu {
+    /* background-color: #000; */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease, min-height 1s ease; /* Smooth transition for visibility */
+    min-height: 0;
+    margin: 0;
+    padding: 100px 0 0;
+    text-align: center;
+    z-index: 8;
+}
+.hfe-nav-menu::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 1s ease;
+    min-height: 0;
+}
+.hfe-nav-menu > li a{
+    padding: 5px 10px;
+    display: inline-block;
+}
+.hfe-nav-menu > li + li{
+    margin-top: 5px;
+}
+
+.hfe-active-menu + .hfe-nav-menu__submenu-arrow .hfe-nav-menu {
+    opacity: 1;
+    visibility: visible;
+}
+.hfe-active-menu + .hfe-nav-menu__submenu-arrow .hfe-nav-menu::before{
+    min-height: 100vh;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Subtle upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0); /* Start at original position */
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px); /* Move down slightly */
+    }
+}
