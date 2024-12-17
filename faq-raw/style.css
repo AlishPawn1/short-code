@@ -1,0 +1,48 @@
+.accordion-item{
+    max-width: 50%;
+    margin: 0 auto;
+}
+.accordion-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.accordion-header {
+    background-color: #ECECEC;
+    padding: 13px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.accordion-header .title{
+    margin: 0;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1f2124;
+}
+.accordion-header.active .icon svg{
+    transform: rotate(-180deg);
+}
+.accordion-header .icon{
+    padding-top: 6px;
+    display: inline-block;
+}
+.accordion-content {
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+    background-color: #fff;
+}
+.accordion-content .content{
+    padding: 10px 15px;
+    margin-top: 14px;
+}
+.accordion-content .content p:last-of-type{
+    margin: 0;
+}
+.accordion-content .content p{
+    font-size: 16px;
+    line-height: 1.5;
+}
