@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Tab with jQuery</title>
-<style>
-    /* Basic styling */
-    .tab-container {
-        width: 100%;
-        margin: 20px auto;
-    }
-
-    .tab-buttons {
-        display: flex;
-    }
-
-    .tab-buttons button {
-        flex: 1;
-        padding: 10px;
-        cursor: pointer;
-        background-color: #f1f1f1;
-        border: none;
-        outline: none;
-    }
-
-    .tab-buttons button.active {
-        background-color: #ccc;
-    }
-
-    .tab-content {
-        display: none;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-top: none;
-    }
-
-    .tab-content.active {
-        display: block;
-    }
-</style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tab with jQuery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -66,19 +31,8 @@
     </div>
 </div>
 
-<script>
-$(document).ready(function(){
-    $('.tab-link').click(function(){
-        // Remove active class from all tabs and contents
-        $('.tab-link').removeClass('active');
-        $('.tab-content').removeClass('active').hide();
-        
-        // Add active class to clicked tab and show related content
-        $(this).addClass('active');
-        $('#' + $(this).data('tab')).addClass('active').fadeIn();
-    });
-});
-</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
