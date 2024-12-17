@@ -1,0 +1,33 @@
+.masonry-list .item {
+	width: calc(24% - 10px); 
+	margin-bottom: 25px;
+    background: #ddd;
+    padding: 10px;
+}
+.masonry-list .item img{
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-width: 1600px) {
+    .masonry-list .item{
+		width: calc(25% - 15px);
+		margin-bottom: 15px;
+	}
+}
+@media screen and (max-width: 1024px) {
+    .masonry-list .item{
+		width: calc(32% - 10px);
+		margin-bottom: 25px;
+	}
+}
+@media screen and (max-width: 991px) {
+    .masonry-list .item{
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 767px) {
+    .masonry-list .item{
+		width: calc(48% - 7.5px);
+		margin-bottom: 10px;
+	}
+}

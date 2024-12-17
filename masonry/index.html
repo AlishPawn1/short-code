@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="masonry-section">
+        <div class="container">
+            <div class="masonry-list">
+                <div class="item">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.querySelector('.masonry-list');
+
+            if (grid) {
+                const calculateGutter = () => {
+                    const viewportWidth = window.innerWidth;
+                    if (viewportWidth < 576) return 15; 
+                    if (viewportWidth < 1600) return 20;
+                    return 30; 
+                };
+
+                const initMasonry = () => {
+                    imagesLoaded(grid, () => {
+                        new Masonry(grid, {
+                            itemSelector: '.item',
+                            percentPosition: true,
+                            gutter: calculateGutter(),
+                        });
+                    });
+                };
+
+                initMasonry();
+                window.addEventListener('resize', () => {
+                    if (grid.masonry) {
+                        grid.masonry.destroy();
+                    }
+                    initMasonry();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

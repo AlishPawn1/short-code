@@ -1,0 +1,15 @@
+.height{
+    min-height: 100vh;
+}
+#bottom-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 0 8px 0;
+    padding: 5px;
+    border-radius: 5px;
+    --size: 25px;
+    height: var(--size);
+    width: var(--size);
+    display: grid;
+}
