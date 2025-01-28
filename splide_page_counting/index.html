@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide count</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+</head>
+<body>
+    <section class="count-slide-section">
+        <div class="container">
+            <div class="main-title text-center">
+                <h1 class="title fs-2">Count slide </h1>
+            </div>
+        </div>
+        <div class="banner-slide splide">
+            <div class="splide__track">
+                <div class="splide__list">
+                    <div class="splide__slide">
+                        <div class="banner" style="--bg-color: red;">
+                            <div class="container">
+                                <div class="content">
+                                    <h2 class="title">title</h2>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="banner" style="--bg-color: black;">
+                            <div class="container">
+                                <div class="content">
+                                    <h2 class="title">title</h2>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="splide__slide">
+                        <div class="banner" style="--bg-color: #ddd;">
+                            <div class="container">
+                                <div class="content">
+                                    <h2 class="title">title</h2>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-counter">
+                <span id="current-slide">1</span> / <span id="total-slides"></span>
+            </div>            
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

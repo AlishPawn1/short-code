@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    display: inline-block;
+    text-decoration: unset;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.btn-box{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+.btn-box:hover{
+    background-color: #000;
+    color: #fff;
+}
+.img-cover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+}
+.overlay.active{
+    opacity: 0.3;
+    visibility: visible;
+}
+.popup-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 6;
+    box-shadow: 0 0 8px 0 #000;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-box.active{
+    opacity: 1;
+    visibility: visible;
+}
+.popup-box .close{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.popup-wrap{
+    position: relative;
+}
+.content-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+.content-wrap :is(.left-content, .right-content){
+    flex: 0 0 var(--size);
+    max-width: var(--size);
+}
+.content-wrap .left-content{
+    --size: calc(280px - 20px);
+}
+.content-wrap .right-content{
+    --size: calc(500px - 20px);
+}
+.left-content .image{
+    height: 300px;
+    width: 100%;
+    background-color: #fcfcfc;
+}

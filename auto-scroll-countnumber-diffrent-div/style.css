@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --primary-color: #2b2e31;
+    --secondary-color: #11d0a0;
+
+    --primary-fonts: "Poppins", serif;
+    --secondary-fonts: "Roboto", serif;
+}
+.height{
+    min-height: 100vh;
+}
+.primary-bg {
+    background-color: var(--primary-color);
+}
+/* column-gap-section */
+.column-gap-section .top-column{
+    background-color: var(--secondary-color);
+    padding: 25px;
+    display: flex;
+    margin-top: -70px;
+    position: relative;
+    min-height: 135px;
+}
+.column-gap-section .top-column .count-number span{
+    font-size: 68px ;
+    line-height: 1;
+    color: #fff;
+}
+.column-gap-section .top-column .count-number {
+    text-align: center;
+}
+.column-gap-section .top-column .right-content .title{
+    font-size: 24px;
+    line-height: 1;
+}
+.column-gap-section .top-column .right-content p{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.column-gap-section .top-column .content-wrap{
+    align-items: center;
+}
+.column-gap-section .content-section{
+    margin-top: 100px;
+    color: #fff;
+}
+.column-gap-section .content-section .text-content .main-title{
+    display: flex;
+    margin-bottom: 40px;
+}
+.column-gap-section .content-section .text-content .count-number{
+    font-size: 42px;
+    line-height: 1.1;
+    color: var(--secondary-color);
+    --size: 100px;
+    flex: 0 0 var(--size);
+    width: var(--size);
+}
+.column-gap-section .content-section .text-content .main-title .title{
+    color: #fff;
+    font-size: 38px;
+    line-height: 1.2;
+    font-family: var(--primary-fonts);
+}
+.column-gap-section .content-section .custom-list{
+    margin: 20px 0 0 40px;
+}
+/* column-gap-section */

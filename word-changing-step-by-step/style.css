@@ -1,0 +1,25 @@
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+    display: inline-block;
+}
+.position-relative{
+    position: relative;
+}
+
+.cursor.typing {
+    animation: none;
+    /* Stops blinking while typing */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

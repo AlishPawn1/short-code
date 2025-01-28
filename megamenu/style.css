@@ -1,0 +1,140 @@
+.primary-menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+.primary-menu li a{
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--e-global-color-secondary);
+    transition: all 0.3s ease;
+}
+:is(.primary-menu, .hfe-nav-menu) li:hover .hfe-has-submenu-container > a, :is(.primary-menu, .hfe-nav-menu) li:hover > a{
+    color: var(--e-global-color-primary);
+    text-decoration: unset !important;
+}
+.primary-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.primary-menu li:has(.megamenu){
+	position: static;
+}
+.primary-menu li{
+    position: relative;
+}
+.megamenu-lists .item{
+    width: 25%;
+}
+.megamenu-item .title a{
+    color: var(--e-global-color-text) !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.megamenu-item .title{
+    padding-bottom: 12px;
+    border-bottom: 2px solid #dee2e6;
+    position: relative;
+    margin: 0;
+}
+.megamenu-item .title::after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--e-global-color-primary);
+    height: 2px;
+    width: 95px;
+}
+.megamenu-item .menu-list li{
+    padding: 4px 8px;
+}
+.megamenu-item .menu-list li a{
+    color: #6C757D;
+}
+.sub-menu a{
+    color: var(--e-global-color-secondary);
+    font-weight: 400;
+}
+.sub-menu a:hover{
+    text-decoration: unset !important;
+    color: var(--e-global-color-primary);
+}
+.nav-item .hamburger-btn{
+	display: flex;
+	cursor: pointer; 
+}
+.nav-item .hamburger-btn svg{
+    --size: 25px;
+    height: var(--size);
+    width: var(--size);
+}
+@media screen and (min-width: 1025px) {
+	.primary-menu > li > a{
+		padding: 10px 0;
+		display: inline;
+	}
+    .primary-menu .menu-dropdown > a::after{
+        content: '';
+        --size: 10px;
+        height: var(--size);
+        width: var(--size);
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="%23000000" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/></svg>');
+        transition: all 0.3s ease;
+    }
+    .primary-menu .menu-dropdown:hover > a::after{
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="%23DEB454" height="800px" width="800px" version="1.1" id="Layer_1" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/></svg>');
+    }
+    .sub-menu, .megamenu{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-width: 400px;
+        min-width: 200px;
+        text-wrap: nowrap;
+        background-color: #fff;
+        max-height: 60vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 1;
+		box-shadow: 0 24px 64px rgba(0, 0, 0, 0.1);
+    }
+    .primary-menu .sub-menu{
+        padding: 8px 0;
+		display: block !important;
+    }
+    .dropdown-btn{
+        display: none;
+    }
+    .megamenu{
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        top: 53px;
+        padding: 32px 0;
+    }
+    .primary-menu .menu-dropdown:hover :is(.sub-menu, .megamenu){
+        opacity: 1;
+        visibility: visible;
+    }
+    .sub-menu li{
+        padding: 4px 16px;
+    }
+	.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+		right: 80px !important;
+	}
+	.nav-item .hamburger-btn, .nav-item .top-nav{
+		display: none;
+	}
+}

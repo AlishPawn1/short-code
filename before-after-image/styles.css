@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 600px; /* Set the width of the container */
+    margin: 50px auto; /* Center the container */
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.before-image,
+.after-image {
+    width: 100%;
+    display: block;
+}
+
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    clip: rect(0, 300px, 400px, 0); /* Adjust this to match the initial slider position */
+}
+
+.slider {
+    position: absolute;
+    cursor: ew-resize;
+    width: 2px; /* Width of the slider handle */
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 50%; /* Initial position of the slider */
+    transform: translateX(-50%);
+}
+
+/* New styles for the circular handle */
+.slider::before {
+    content: '';
+    position: absolute;
+    --size: 50px;
+    width: var(--size); /* Diameter of the circular handle */
+    height: var(--size); /* Diameter of the circular handle */
+    background-color: #fff; /* Color of the circular handle */
+    border-radius: 50%; /* Make it circular */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the circular handle */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+}
