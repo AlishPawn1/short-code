@@ -1,0 +1,16 @@
+.custom-body-class {
+    background-color: lightblue; /* Just for visual confirmation */
+}
+.location-popup {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: none; /* Initially hidden */
+}
+.overflow-hidden{
+    overflow: hidden !important;
+}
